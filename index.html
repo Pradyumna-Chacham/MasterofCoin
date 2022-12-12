@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Budget Calculator</title>
+	<meta name="description" content="Detailed free budget calculator to plan personal finances with Debt-to-Income (DTI) ratio and expense breakdown. Also, download our free budget template." />
+	<link rel="stylesheet" href="//d26tpo4cm8sb6k.cloudfront.net/style.css" /><script src="//d26tpo4cm8sb6k.cloudfront.net/js/common.js"></script>	<link rel="apple-touch-icon" sizes="180x180" href="//d26tpo4cm8sb6k.cloudfront.net/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="//d26tpo4cm8sb6k.cloudfront.net/icon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="//d26tpo4cm8sb6k.cloudfront.net/icon-16x16.png">
+	<link rel="manifest" href="/manifest.json"><script type="text/javascript" src="//d26tpo4cm8sb6k.cloudfront.net/js/jquery.min.js"></script>
+<script src="//d26tpo4cm8sb6k.cloudfront.net/highchart/highcharts.js"></script>
+</head>
+<body>
+<div id="headerout">
+	<div id="header">
+		<div id="logo"><a href="/"><img src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculator-white.svg" width="208" height="22"></a></div>
+			</div>
+</div>
+<div id="clear"></div><div id="contentout"><div id="content"><div id="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">home</span></a><meta itemprop="position" content="1" /></span> / <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">budget calculator</span></a><meta itemprop="position" content="3" /></span></div><div id="printit"><a href="#" onClick="document.calform.printit.value=1;document.calform.submit();return false;">Print</a></div>		<h1>Budget Calculator</h1>
+<p>This budget calculator is mainly for the planning of personal finance. All the income items are before tax values.</p><div id="insmdc"><img src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/insm.svg"></div><form name="calform">
+<table bgcolor="#dddddd" cellpadding="5" cellspacing="0" align="center">
+<tr><td colspan="4" id="sectitle"></td></tr>
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Budget overview</b></td></tr>
+
+<tr>
+	<td>&nbsp;&nbsp;</td>
+	<td>Salary  before tax</td>
+	<td><input type="text" name="salary" id="salary" value="80000" class="innormal indollar"></td>
+	<td>/ <select name="lgsalary"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Income Tax Rate:</td>
+	<td><input type="text" name="taxrate" id="taxrate" value="28" class="innormal inpct"></td>
+	<td></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Salary after tax</td>
+	<td><input type="text" name="Salary after tax" id="Salary after tax" value="1000" class="innormal indollar"></td>
+	<td>/ <select name="lgSalary after tax"><option value="m" >Month</option><option value="y" selected>Year</option></select>
+		</td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Expenditure</td>
+	<td><input type="text" name="Expenditure" id="Expenditure" value="2000" class="innormal indollar"></td>
+	<td>/ <select name="lgExpenditure"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+
+
+<tr><td colspan="4" id="sectitle"></td></tr>
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Housing Expenses</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Vehicle loan</td>
+	<td><input type="text" name="vehicle loan" id="vehicle loan" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgVehicle loan"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Fuel</td>
+	<td><input type="text" name="Fuel" id="Fuel" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgFuel"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Rental</td>
+	<td><input type="text" name="rental" id="rental" value="1400" class="innormal indollar"></td>
+	<td>/ <select name="lgrental"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+    <tr>
+	<td>&nbsp;</td>
+	<td>Car Insurance</td>
+	<td><input type="text" name="Car Insurance" id="Car Insurance" value="1400" class="innormal indollar"></td>
+	<td>/ <select name="lgCar Insurance"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Insurance</td>
+	<td><input type="text" name="houseinsurance" id="houseinsurance" value="200" class="innormal indollar"></td>
+	<td>/ <select name="lghouseinsurance"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Car Maintainance</td>
+	<td><input type="text" name="Car Maintainance" id="Car Maintainance" value="0" class="innormal indollar"></td>
+	<td>/ <select name="Car Maintainance"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Other</td>
+	<td><input type="text" name="Other" id="Other" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgOther"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+<!--Food Expenses-->
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Food</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Food</td>
+	<td><input type="text" name="Food" id="Food" value="250" class="innormal indollar"></td>
+	<td>/ <select name="lgFood"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+    <tr>
+	<td>&nbsp;</td>
+	<td>Meals</td>
+	<td><input type="text" name="Meals" id="Meals" value="250" class="innormal indollar"></td>
+	<td>/ <select name="lgMeals"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+ <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Health Care</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Medicines</td>
+	<td><input type="text" name="Medicines" id="Medicines" value="700" class="innormal indollar"></td>
+	<td>/ <select name="lgMedicines"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Doctor Consultation/fee</td>
+	<td><input type="text" name="Doctor Consultation/fee" id="Doctor Consultation/fee" value="100" class="innormal indollar"></td>
+	<td>/ <select name="lgDoctor Consultation/fee"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Savings</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Mutual Funds</td>
+	<td><input type="text" name="Mutual Funds" id="Mutual Funds" value="20" class="innormal indollar"></td>
+	<td>/ <select name="lgMutual Funds"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Fixed Deposit</td>
+	<td><input type="text" name="Fixed Deposit" id="Fixed Deposit" value="0" class="innormal indollar"></td>
+    <td>/ <select name="lgFixed Deposit"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Pension</td>
+	<td><input type="text" name="Pension" id="Pension" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgPension"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Investments</td>
+	<td><input type="text" name="Investments" id="Investments" value="250" class="innormal indollar"></td>
+	<td>/ <select name="lgInvestments"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+    <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Loans & Other Payments</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Credit Card</td>
+	<td><input type="text" name="Credit Card" id="Credit Card" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgCredit Card"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Education Loan</td>
+	<td><input type="text" name="Education Loan" id="Education Loan" value="400" class="innormal indollar"></td>
+	<td>/ <select name="lgEducation Loan"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Other Loans</td>
+	<td><input type="text" name="Other Loans" id="Other Loans" value="100" class="innormal indollar"></td>
+	<td>/ <select name="lgOther Loans"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+
+
+
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Living Expenses</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Clothing</td>
+	<td><input type="text" name="Clothing" id="Clothing" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgClothing"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Household Expenses</td>
+	<td><input type="text" name="Household Expenses" id="Household Expenses" value="200" class="innormal indollar"></td>
+	<td>/ <select name="lgHousehold Expenses"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Miscellaneous</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Hobbies</td>
+	<td><input type="text" name="Hobbies" id="Hobbies" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgHobbies"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Travel</td>
+	<td><input type="text" name="Travel" id="Travel" value="0" class="innormal indollar"></td>
+	<td>/ <select name="lgTravel"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+	<td>&nbsp;</td>
+	<td>Recreation</td>
+	<td><input type="text" name="Recreation" id="Recreation" value="100" class="innormal indollar"></td>
+	<td>/ <select name="lgRecreation"><option value="m" selected>Month</option><option value="y" >Year</option></select></td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Other Expenses</td>
+	<td><input type="text" name="Other Expenses" id="Other Expenses" value="10000" class="innormal indollar"></td>
+	<td>/ <select name="lgOther Expenses"><option value="m" >Month</option><option value="y" selected>Year</option></select></td>
+</tr>
+    [
+
+
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Emergency Fund &amp; Other</td>
+	<td><input type="text" name="othersavings" id="othersavings" value="0" class="innormal indollar"></td>
+    <td>/ <select name="lgothersavings"><option value="m" selected>Month</option><option value="y" >Year</option></select> </td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+	<td colspan="2">&nbsp;</td>
+	<td colspan="2"><input name="printit" value="0" type="hidden"><input type="image" src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculate.svg" value="Calculate" alt="Calculate"></td>
+</tr>
+</table>
+</form>
+	<div id="right">
+		<div style="padding-top:10px;  min-height:280px; text-align:center;">
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+	googletag.defineSlot('/1057446/Calculator-Top-Right-Desktop', [[300, 250], [336, 280]], 'div-gpt-ad-1589567013929-0').addService(googletag.pubads());
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+  });
+</script>
+<!-- /1057446/Calculator-Top-Right-Desktop -->
+<div id='div-gpt-ad-1589567013929-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1589567013929-0'); });
+  </script>
+</div>
+<div id="clear"></div>
+<div id="footer"><div id="footerin"><div id="footernav"><a href="/about-us.html">about us</a>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-3068863-11']);
+_gaq.push(['_trackPageview','/budget-calculator.html_____Section_1_US__do']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+
+</script><div class="topNavAbs">
+</body>
+</html>
