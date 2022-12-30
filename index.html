@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Budget Calculator</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+<div id="headerout">
+	<div id="header">
+		<center><div id="logo"><a href="https://imgbb.com/"><img src="https://i.ibb.co/VY2C2ds/20221212-140922-0000-1.jpg" alt="20221212-140922-0000-1" border="1"></a><center>
+</div>
+			</div>
+</div>
+
+<center><font face="Verdana"><h1 style="font-size:80px;"> Budget Calculator</h1></font><center>
+<p>ENTER ALL VALUES ON MONTHLY BASIS.</p>
+<form method="POST" action="https://main.d2wvd6vk3vz08r.amplifyapp.com/">
+<table bgcolor="#dddddd" cellpadding="5" cellspacing="0" align="center">
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Budget overview</b></td></tr>
+<tr>
+	<td>&nbsp;&nbsp;</td>
+	<td>Salary  before tax</td>
+	<td><input type="text" name="salary" id="salary" value="80000" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Income Tax Rate:</td>
+	<td><input type="text" name="taxrate" id="taxrate" value="28" class="innormal inpct"></td>
+	<td></td>
+</tr>
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Housing Expenses</b></td></tr>
+
+<!--Housing Expenses-->
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Rent & Housing</td>
+	<td><input type="text" name="rental" id="rental" value="1400" class="innormal indollar"></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Maintenance</td>
+	<td><input type="text" name="House Maintenance" id="House Maintenance" value="0" class="innormal indollar"></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Insurance</td>
+	<td><input type="text" name="houseinsurance" id="houseinsurance" value="200" class="innormal indollar"></td>	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Utilities</td>
+	<td><input type="text" name="utilities" id="utilities" value="200" class="innormal indollar"></td>
+</tr>
+
+<!--Transportation Expenses-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Transportation</b></td></tr>
+<td>&nbsp;</td>
+	<td>Vehicle loan</td>
+	<td><input type="text" name="vehicle loan" id="vehicle loan" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Fuel</td>
+	<td><input type="text" name="Fuel" id="Fuel" value="0" class="innormal indollar"></td>
+	
+</tr>
+    <tr>
+	<td>&nbsp;</td>
+	<td>Vehicle Insurance</td>
+	<td><input type="text" name="Car Insurance" id="Car Insurance" value="1400" class="innormal indollar"></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Car Maintenance</td>
+	<td><input type="text" name="Car Maintenance" id="Car Maintenance" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Other</td>
+	<td><input type="text" name="Other" id="Other" value="0" class="innormal indollar"></td>	
+</tr>
+
+<!--Loans and Other Payments-->
+
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Loans & Other Payments</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Credit Card</td>
+	<td><input type="text" name="Credit Card" id="Credit Card" value="0" class="innormal indollar"></td>
+</tr>
+
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Education Loan</td>
+	<td><input type="text" name="Education Loan" id="Education Loan" value="400" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Other Loans</td>
+	<td><input type="text" name="Other Loans" id="Other Loans" value="100" class="innormal indollar"></td>	
+</tr>
+
+<!--Living Expenses-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Living Expenses</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Clothing</td>
+	<td><input type="text" name="Clothing" id="Clothing" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Household Expenses</td>
+	<td><input type="text" name="Household Expenses" id="Household Expenses" value="200" class="innormal indollar"></td>
+	
+</tr>
+
+<!--Food Expenses-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Food</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Food</td>
+	<td><input type="text" name="Food" id="Food" value="250" class="innormal indollar"></td>
+	
+</tr>
+    <tr>
+	<td>&nbsp;</td>
+	<td>Meals</td>
+	<td><input type="text" name="Meals" id="Meals" value="250" class="innormal indollar"></td>
+</tr>
+ 
+
+<!--Healthcare Expenses-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Health Care</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Medicines</td>
+	<td><input type="text" name="Medicines" id="Medicines" value="700" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Doctor Consultation/fee</td>
+	<td><input type="text" name="Doctor Consultation/fee" id="Doctor Consultation/fee" value="100" class="innormal indollar"></td>
+</tr>
+
+<!--Savings and Investments-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Savings</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Mutual Funds</td>
+	<td><input type="text" name="Mutual Funds" id="Mutual Funds" value="20" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Fixed Deposit</td>
+	<td><input type="text" name="Fixed Deposit" id="Fixed Deposit" value="0" class="innormal indollar"></td>
+    
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Pension</td>
+	<td><input type="text" name="Pension" id="Pension" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Investments</td>
+	<td><input type="text" name="Investments" id="Investments" value="250" class="innormal indollar"></td>
+	
+</tr>
+    
+<!--Miscellaneous Expenses-->
+
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Miscellaneous</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Hobbies</td>
+	<td><input type="text" name="Hobbies" id="Hobbies" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Travel</td>
+	<td><input type="text" name="Travel" id="Travel" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Recreation</td>
+	<td><input type="text" name="Recreation" id="Recreation" value="100" class="innormal indollar"></td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Other Expenses</td>
+	<td><input type="text" name="Other Expenses" id="Other Expenses" value="10000" class="innormal indollar"></td>
+</tr>
+<tr>
+	<td><button>Calculate</button></td>
+    </tr>
+</table>
+</form>
+<div id="footer"><div id="footerin"><div id="footernav"><a href="https://main.d38jr8i0bzv3qw.amplifyapp.com/">About Us</a>
+	<div><button onClick="window.print()">Print</button></div>
+	<div id="right">
+		<div style="padding-top:10px;  min-height:280px; text-align:center;">
+</body>
+</html>
