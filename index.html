@@ -3,6 +3,20 @@
 <html lang="en">
 <head>
 	<title>Budget Calculator</title>
+<style>
+.footer {
+  position: static;
+  display: inline-block;
+  margin-top: 5%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #dddddd;
+  color: black;
+  text-align: center;
+}
+
+</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -17,7 +31,7 @@
 
 <center><font face="Verdana"><h1 style="font-size:80px;"> Budget Calculator</h1></font><center>
 <p>ENTER ALL VALUES ON MONTHLY BASIS.</p>
-<form method="POST" action="https://main.d2wvd6vk3vz08r.amplifyapp.com/">
+<form action="https://main.d2wvd6vk3vz08r.amplifyapp.com/" method="post">
 <table bgcolor="#dddddd" cellpadding="5" cellspacing="0" align="center">
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Budget overview</b></td></tr>
 <tr>
@@ -32,10 +46,16 @@
 	<td><input type="text" name="taxrate" id="taxrate" value="28" class="innormal inpct"></td>
 	<td></td>
 </tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Expenditure</td>
+	<td><input type="text" name="Expenditure" id="Expenditure" value="2000" class="innormal indollar"></td>
+	
+</tr>
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Housing Expenses</b></td></tr>
-
-<!--Housing Expenses-->
-
+<tr>
+	<
 <tr>
 	<td>&nbsp;</td>
 	<td>Rent & Housing</td>
@@ -56,8 +76,6 @@
 	<td>Utilities</td>
 	<td><input type="text" name="utilities" id="utilities" value="200" class="innormal indollar"></td>
 </tr>
-
-<!--Transportation Expenses-->
 
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Transportation</b></td></tr>
 <td>&nbsp;</td>
@@ -85,50 +103,11 @@
 <tr>
 	<td>&nbsp;</td>
 	<td>Other</td>
-	<td><input type="text" name="Other" id="Other" value="0" class="innormal indollar"></td>	
-</tr>
-
-<!--Loans and Other Payments-->
-
-
-<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Loans & Other Payments</b></td></tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>Credit Card</td>
-	<td><input type="text" name="Credit Card" id="Credit Card" value="0" class="innormal indollar"></td>
-</tr>
-
-
-<tr>
-	<td>&nbsp;</td>
-	<td>Education Loan</td>
-	<td><input type="text" name="Education Loan" id="Education Loan" value="400" class="innormal indollar"></td>
-	
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>Other Loans</td>
-	<td><input type="text" name="Other Loans" id="Other Loans" value="100" class="innormal indollar"></td>	
-</tr>
-
-<!--Living Expenses-->
-
-<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Living Expenses</b></td></tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>Clothing</td>
-	<td><input type="text" name="Clothing" id="Clothing" value="0" class="innormal indollar"></td>
-	
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>Household Expenses</td>
-	<td><input type="text" name="Household Expenses" id="Household Expenses" value="200" class="innormal indollar"></td>
+	<td><input type="text" name="Other" id="Other" value="0" class="innormal indollar"></td>
 	
 </tr>
 
 <!--Food Expenses-->
-
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Food</b></td></tr>
 <tr>
 	<td>&nbsp;</td>
@@ -141,11 +120,7 @@
 	<td>Meals</td>
 	<td><input type="text" name="Meals" id="Meals" value="250" class="innormal indollar"></td>
 </tr>
- 
-
-<!--Healthcare Expenses-->
-
-<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Health Care</b></td></tr>
+ <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Health Care</b></td></tr>
 <tr>
 	<td>&nbsp;</td>
 	<td>Medicines</td>
@@ -156,10 +131,8 @@
 	<td>&nbsp;</td>
 	<td>Doctor Consultation/fee</td>
 	<td><input type="text" name="Doctor Consultation/fee" id="Doctor Consultation/fee" value="100" class="innormal indollar"></td>
+	
 </tr>
-
-<!--Savings and Investments-->
-
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Savings</b></td></tr>
 <tr>
 	<td>&nbsp;</td>
@@ -185,8 +158,39 @@
 	<td><input type="text" name="Investments" id="Investments" value="250" class="innormal indollar"></td>
 	
 </tr>
-    
-<!--Miscellaneous Expenses-->
+    <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Loans & Other Payments</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Credit Card</td>
+	<td><input type="text" name="Credit Card" id="Credit Card" value="0" class="innormal indollar"></td>
+</tr>
+
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Education Loan</td>
+	<td><input type="text" name="Education Loan" id="Education Loan" value="400" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Other Loans</td>
+	<td><input type="text" name="Other Loans" id="Other Loans" value="100" class="innormal indollar"></td>
+	
+</tr>
+<tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Living Expenses</b></td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Clothing</td>
+	<td><input type="text" name="Clothing" id="Clothing" value="0" class="innormal indollar"></td>
+	
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>Household Expenses</td>
+	<td><input type="text" name="Household Expenses" id="Household Expenses" value="200" class="innormal indollar"></td>
+	
+</tr>
 
 <tr bgcolor="#bbbbbb"><td colspan="4" class="bigtext"><b>Miscellaneous</b></td></tr>
 <tr>
@@ -212,14 +216,15 @@
 	<td>Other Expenses</td>
 	<td><input type="text" name="Other Expenses" id="Other Expenses" value="10000" class="innormal indollar"></td>
 </tr>
-<tr>
-	<td><button>Calculate</button></td>
-    </tr>
+ <tr>
+	<td colspan="2">&nbsp;</td>
+	<td colspan="2"><input name="printit" value="0" type="hidden"><input type="image" src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculate.svg" value="Calculate" alt="Calculate"></td>
+</tr>
 </table>
 </form>
-<div id="footer"><div id="footerin"><div id="footernav"><a href="https://main.d38jr8i0bzv3qw.amplifyapp.com/">About Us</a>
+<div class="footer">
+ 	<a href="https://main.d38jr8i0bzv3qw.amplifyapp.com/">About Us</a>
 	<div><button onClick="window.print()">Print</button></div>
-	<div id="right">
-		<div style="padding-top:10px;  min-height:280px; text-align:center;">
+</div>
 </body>
 </html>
