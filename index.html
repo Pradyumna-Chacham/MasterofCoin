@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.footer {
+  position: static;
+  display: inline-block;
+  margin-top: 5%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #dddddd;
+  color: black;
+  text-align: center;
+}
+legend{
+ padding: 10px;
+ color: white;
+ font-size: 20px;
+ margin: auto;
+ max-width:500px;
+ width:100%;
+ background-color: #00308F;
+}
+fieldset
+{
+  background-color:#dddddd;
+  max-width:500px;
+  padding:5px;	
+}
+input[type=text], select {
+  width: 50%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  max-width: 500px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 2px;
+  background-color: white;
+  padding: 1px;
+}
+</style>
+<title>Budget Calculator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chart.piecelabel.js/0.15.0/Chart.PieceLabel.min.js"></script>
+</head>
+<body>
+<div id="headerout">
+	<div id="header">
+		<center><div id="logo"><a href="https://imgbb.com/"><img src="https://i.ibb.co/VY2C2ds/20221212-140922-0000-1.jpg" alt="20221212-140922-0000-1" border="1"></a><center> </div>
+			</div>
+</div>
+</div>
+</div>
+
+<center><font face="Verdana"><h1 style="font-size:80px;"> Budget Calculator</h1></font><center>
+<p>ENTER ALL VALUES ON MONTHLY BASIS.</p>
+<div>
+  <form action=" https://main.d2wvd6vk3vz08r.amplifyapp.com/" method="post">
+  <legend>Budget Overview</legend>
+  <fieldset>
+      <div><label for="fname">Salary</label></div>
+    <div><input type="text" id="salary" name="firstname" placeholder="200000"></div>
+
+    <div><label for="lname">Income Tax Rate</label></div>
+     <div><input type="text" id="taxrate" name="lastname" placeholder="15"></div>
+    </fieldset>
+    <legend>Housing:</legend>
+    <fieldset>    
+    <div><label for="lname">Rent</label></div>
+    <div><input type="text" id="rental" name="Rent" placeholder="10000"></div>
+    <div><label for="lname">Maintenance</label></div>
+    <div><input type="text" id="House Maintenance" name="Maintenance" placeholder="3000"></div>
+    <div><label for="lname">House Insurance</label></div>
+    <div><input type="text" id="houseinsurance" name="House Insurance" placeholder="1000"></div>
+    <div><label for="lname">Utilities</label></div>
+    <div><input type="text" id="utilities" name="Utilities" placeholder="1500"></div>
+    </fieldset>
+    <legend>Transportation:</legend>
+	<fieldset>
+    
+    <div><label for="lname">Vehicle loan</label></div>
+    <div><input type="text" id="vehicle loan" name="Vehicle loan" placeholder="1000"></div>
+    <div><label for="lname">Fuel</label></div>
+    <div><input type="text" id="Fuel" name="Fuel" placeholder="1000"></div>
+    <div><label for="lname">Vehicle Insurance</label></div>
+    <div><input type="text" id="Car Insurance" name="Vehicle Insurance" placeholder="1000"></div>
+    <div><label for="lname">Car Maintenance</label></div>
+    <div><input type="text" id="Car Maintenance" name="Car Maintenance" placeholder="1000"></div>
+    <div><label for="lname">Other</label></div>
+    <div><input type="text" id="Other" name="Other" placeholder="1000"></div>
+    </fieldset>
+<legend>Food:</legend>
+    <fieldset>
+     
+    <div><label for="lname">Food</label></div>
+    <div><input type="text" id="Food" name="Food" placeholder="2000"></div>
+    <div><label for="lname">Meals</label></div>
+    <div><input type="text" id="Meals" name="Meals" placeholder="2000"></div>
+    </fieldset>
+ <legend>Healthcare:</legend>
+    <fieldset>
+    
+    <div><label for="lname">Medicines</label></div>
+    <div><input type="text" id="Medicines" name="Medicines" placeholder="1000"></div>
+    <div><label for="lname">Doctor Consultation/Fee</label></div>
+    <div><input type="text" id="Doctor Fee" name="Doctor Fee" placeholder="1000"></div>
+    </fieldset>
+<legend>Savings:</legend>
+    <fieldset>
+    <div><label for="lname">Mutual Funds</label></div>
+    <div><input type="text" id="Mutual Funds" name="Mutual Funds" placeholder="10000"></div>
+    <div><label for="lname">Fixed Deposits</label></div>
+    <div><input type="text" id="Fixed Deposit" name="Fixed Deposits" placeholder="10000"></div>
+    <div><label for="lname">Pension</label></div>
+    <div><input type="text" id="Pension" name="Pension" placeholder="10000"></div>
+    <div><label for="lname">Investments</label></div>
+    <div><input type="text" id="Investments" name="Investments" placeholder="10000"></div>
+    </fieldset>
+<legend>Loans & Other Payments:</legend>
+    <fieldset>
+     
+    <div><label for="lname">Credit Card Payment</label></div>
+    <div><input type="text" id="Credit Card" name="Credit Card" placeholder="5000"></div>
+    <div><label for="lname">Education Loan</label></div>
+    <div><input type="text" id="Education Loan" name="Education Loan" placeholder="5000"></div>
+    <div><label for="lname">Other loans/payments</label></div>
+    <div><input type="text" id="Other Loans" name="Other payments" placeholder="5000"></div>
+    </fieldset>
+<legend>Living Expenses:</legend>
+    <fieldset>
+     
+    <div><label for="lname">Clothing</label></div>
+    <div><input type="text" id="Clothing" name="Clothing" placeholder="2000"></div>
+    <div><label for="lname">Household Expenses</label></div>
+    <div><input type="text" id="Household Expenses" name="Household Expenses" placeholder="2000"></div>
+    </fieldset>
+ <legend>Miscellaneous Expenses:</legend>
+    <fieldset>
+   
+    <div><label for="lname">Hobbies</label></div>
+    <div><input type="text" id="Hobbies" name="Hobbies" placeholder="1000"></div>
+    <div><label for="lname">Travel</label></div>
+    <div><input type="text" id="Travel" name="Travel" placeholder="1000"></div>
+    <div><label for="lname">Recreation</label></div>
+    <div><input type="text" id="Recreation" name="Recreation" placeholder="1000"></div>
+    <div><label for="lname">Other Expenses</label></div>
+    <div><input type="text" id="Other Expenses" name="Other Expenses" placeholder="1000"></div>
+    </fieldset>  
+   <input type="submit" value="Calculate">
+  </form>
+  </div>
+<div class="footer">
+ 	<a href="https://main.d38jr8i0bzv3qw.amplifyapp.com/">About Us</a>
+	<p><button onClick="window.print()">Print</button></p>
+</div>
+</body>
+</html>
+
+
+
